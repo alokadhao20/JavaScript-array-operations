@@ -144,7 +144,122 @@
     // O/p a= [ 'Apple' ]
     // fruits= [ 'Banana', 'Orange', 'Lemon', 'Kiwi', 'Mango' ]
     
- // 14. Using filters   
+// 14. toString()  Converts an array to a string, and returns the result
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var a = fruits.toString();
+    // O/p a= Banana,Orange,Apple,Mango
+    // fruits = [ 'Banana', 'Orange', 'Apple', 'Mango' ]
+    
+// 15. unshift() Adds new elements to beginning of an array,returns new length
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var a= fruits.unshift("Lemon","Pineapple");
+    // O/p a= 6
+    // fruits = [ 'Lemon', 'Pineapple', 'Banana', 'Orange', 'Apple', 'Mango' ]
+    
+    
+// 16. valueOf() Returns the primitive value of an array
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var a = fruits.valueOf();
+    // O/p a= [ 'Banana', 'Orange', 'Apple', 'Mango' ]
+    // fruits= [ 'Banana', 'Orange', 'Apple', 'Mango' ]
+
+// 17. every() method
+
+    //every() method always return a boolean value "true" or "false" that base
+    //on run the give function on every item on every item in the array and 
+    //returns true if function returns true for every true
+    var a = [1, 2, 3, 4, 5 ,6],
+    b = a.every(function(item, index, array){
+    });
+    // O/p b=false  // if you didn't return anything, this's considered as return
+    //  things like 'null', you know 'null, undefined, ',NaN' and so on,
+    //  it's converted as false;
+    
+    var a = [1, 2, 3, 4, 5 ,6],
+    b = a.every(function(item, index, array){
+        return item;
+    });
+    // O/p b=true  // cos, there's every item function return true;
+    // "why it's return true"?, cos,every item can converted as true;
+    
+    var a = [1, 2, 3,null, 4, 5 ,6],
+    b = a.every(function(item, index, array){
+        return item;
+    });
+    //O/p b=false //  in this array they inclued a null item, it function
+    // false null, the null was every() converted as false;
+    
+    var a = [1, 2, 3, 3]
+    b = a.every(function(item, index, array){
+        //console.log("item "+item);
+        //console.log("index "+index);
+        //console.log("array "+array);
+        return item > 0;
+    });
+    //console.log("b "+b);
+    //O/p 
+    //  item 1
+    //  index 0
+    //  array 1,2,3,3
+    //  item 2
+    //  index 1
+    //  array 1,2,3,3
+    //  item 3
+    //  index 2
+    //  array 1,2,3,3
+    //  item 3
+    //  index 3
+    //  array 1,2,3,3
+    //  b true
+
+
+    var a = [1, 2, 3, 3, 4, 5 ,6],
+    b = a.every(function(item, index, array){
+        return item > 1;
+    });
+    //O/p b=false  // as 1 is not > 1 which is in array
+    
+// 18. filter() method
+    var a = [1, 3, null, 5 ,6,'richardgong', undefined],
+    b = a.filter(function(item, index, array){
+            //console.log("item "+item);
+            //console.log("index "+index);
+            //console.log("array "+array); 
+        });
+    //console.log("b "+b); 
+    // O/p 
+    /*item 1
+    index 0
+    array 1,3,,5,6,richardgong,
+    item 3
+    index 1
+    array 1,3,,5,6,richardgong,
+    item null
+    index 2
+    array 1,3,,5,6,richardgong,
+    item 5
+    index 3
+    array 1,3,,5,6,richardgong,
+    item 6
+    index 4
+    array 1,3,,5,6,richardgong,
+    item richardgong
+    index 5
+    array 1,3,,5,6,richardgong,
+    item undefined
+    index 6
+    array 1,3,,5,6,richardgong,   */
+    //b=[] // filter just an array of items for which the function returns
+    // ture,,,here, obviously, return nothing, so the result array of item
+    // is nothing that's an empty array;
+    
+    var a = [1, 2, 3, 3, null, 5 ,6,'richardgong', undefined],
+    b = a.filter(function(item, index, array){
+            return item;
+    });
+    //O/p b=[1, 2, 3, 3, 5, 6, "richardgong"] cos null and undefined can't be
+    // conveted as ture, so,it's not retured;
+    
     Array.prototype.filter = function(fun /*, thisp*/)
     {
         var len = this.length;
@@ -170,23 +285,3 @@
     }
     var filtered  = [12, 5, 8, 130, 44].filter(isBigEnough);
     // O/p filtered= 44
-    
-// 15. toString()  Converts an array to a string, and returns the result
-    var fruits = ["Banana", "Orange", "Apple", "Mango"];
-    var a = fruits.toString();
-    // O/p a= Banana,Orange,Apple,Mango
-    // fruits = [ 'Banana', 'Orange', 'Apple', 'Mango' ]
-    
-// 16. unshift() Adds new elements to beginning of an array,returns new length
-    var fruits = ["Banana", "Orange", "Apple", "Mango"];
-    var a= fruits.unshift("Lemon","Pineapple");
-    // O/p a= 6
-    // fruits = [ 'Lemon', 'Pineapple', 'Banana', 'Orange', 'Apple', 'Mango' ]
-    
-    
-// 17. valueOf() Returns the primitive value of an array
-    var fruits = ["Banana", "Orange", "Apple", "Mango"];
-    var a = fruits.valueOf();
-    // O/p a= [ 'Banana', 'Orange', 'Apple', 'Mango' ]
-    // fruits= [ 'Banana', 'Orange', 'Apple', 'Mango' ]
-    
