@@ -8,7 +8,7 @@
     // O/p children=[ 'Cecilie','Lone','Emil','Tobias','Linus','chrome',
     // 'firefox','IE' ]
   
- //2.indexOf() The method searches the array for the specified item, and returns
+ //2.indexOf() The method searches the array for the specified item, and returns 
  // its position. Returns -1 if the item is not found.
     var fruits = ["Banana", "Orange", "Apple", "Mango"];
     var a = fruits.indexOf("Apple");
