@@ -21,9 +21,7 @@
     // O/p a= 6  
     
     var fruits =["Banana","Orange","Apple","Mango","Banana","Orange","Apple"];
-    // Check if element is present in array or not if a=-1 thats means it is not
-    //  present
-    var a = fruits.indexOf("lemon"); 
+    // Check if element is present in array or not if a=-1 thats means it is not 
     // O/p -1 
 
 //3.lastIndexOf() search from end to start, use the lastIndexOf() method
