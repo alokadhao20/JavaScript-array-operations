@@ -14,7 +14,7 @@
     var a = fruits.indexOf("Apple");
     // O/p 2  
 
-    var fruits =["Banana", "Orange","Apple","Mango","Banana","Orange", "Apple"];
+    var fruits =["Banana", "Orange","Apple","Mango","Banana","Orange", "Apple"]; 
     // in this eg it will start search apple from 4th index to last index and
     //  will ignore index 0-3
     var a = fruits.indexOf("Apple", 4); 
